@@ -63,7 +63,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.bluetooth.soc=rome \
     bt.max.hfpclient.connections=1 \
     persist.vendor.btstack.enable.splita2dp=false \
-    bluetooth.chip.vendor=brcm
+    bluetooth.chip.vendor=brcm \
+    ro.bluetooth.library_name=libbluetooth_brcm.so
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \

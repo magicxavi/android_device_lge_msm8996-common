@@ -19,3 +19,4 @@ allow init thermal_device:chr_file { write };
 allow init hal_thermal_hwservice:hwservice_manager { add };
 allow init init:netlink_kobject_uevent_socket { create };
 allow init init:socket { create };
+allow init fingerprint_lge_exec:file { execute };

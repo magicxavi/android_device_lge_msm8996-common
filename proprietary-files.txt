@@ -36,6 +36,8 @@ vendor/lib64/libacdbloader.so
 # Bluetooth - aptX - from Stock H870 V20I 
 lib64/libaptX_encoder.so
 lib64/libaptXHD_encoder.so
+lib/libbluetooth_brcm.so
+lib64/libbluetooth_brcm.so
 
 # Camera postprocessing
 vendor/lib/libchromaflash.so
@@ -97,12 +99,25 @@ etc/firmware/cpp_firmware_v1_12_0.fw:vendor/firmware/cpp_firmware_v1_12_0.fw
 -lib64/libcir_driver.so
 
 # LG Keymaster - from Stock H870 V20I
-lib/hw/lgkm.default.so
 lib/hw/lgkm.msm8996.so
 lib/liblgkm.so
-lib64/hw/lgkm.default.so
 lib64/hw/lgkm.msm8996.so
 lib64/liblgkm.so
+framework/vendor.lge.hardware.lgkm-V1.0-java.jar
+lib/vendor.lge.hardware.lgkm@1.0.so
+lib64/vendor.lge.hardware.lgkm@1.0.so
+
+# Property
+lib/vendor.lge.hardware.property@1.0.so
+lib64/vendor.lge.hardware.property@1.0.so
+lib/vendor.lge.hardware.property@1.1.so
+lib64/vendor.lge.hardware.property@1.1.so
+lib/hw/vendor.lge.hardware.property@1.1-impl.so
+lib64/hw/vendor.lge.hardware.property@1.1-impl.so
+vendor/bin/hw/vendor.lge.hardware.property@1.1-service
+vendor/etc/init/vendor.lge.hardware.property@1.1-service.rc
+framework/vendor.lge.hardware.property-V1.0-java.jar
+framework/vendor.lge.hardware.property-V1.1-java.jar
 
 # Listen
 vendor/lib/hw/sound_trigger.primary.msm8996.so
@@ -121,17 +136,13 @@ lib64/hw/fingerprint.msm8996.so:vendor/lib64/hw/fingerprint.msm8996.so
 framework/vendor.qti.hardware.fingerprint-V1.0-java.jar:vendor/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
-
-# Sysnode
-framework/vendor.lge.hardware.sysnode-V1.0-java.jar:vendor/framework/vendor.lge.hardware.sysnode-V1.0-java.jar
-lib/vendor.lge.hardware.sysnode@1.0.so:vendor/lib/vendor.lge.hardware.sysnode@1.0.so
-lib64/vendor.lge.hardware.sysnode@1.0.so:vendor/lib64/vendor.lge.hardware.sysnode@1.0.so
-vendor/bin/hw/vendor.lge.hardware.sysnode@1.0-service
-vendor/etc/init/vendor.lge.hardware.sysnode@1.0-service.rc
-vendor/lib/hw/vendor.lge.hardware.sysnode@1.0-client.so
-vendor/lib/hw/vendor.lge.hardware.sysnode@1.0-impl.so
-vendor/lib64/hw/vendor.lge.hardware.sysnode@1.0-client.so
-vendor/lib64/hw/vendor.lge.hardware.sysnode@1.0-impl.so
+lib/framework/vendor.lge.hardware.biometrics.fingerprint-V2.1-java.jar
+lib/framework/vendor.lge.hardware.biometrics.fingerprint-V2.2-java.jar
+vendor/lib/vendor.lge.hardware.biometrics.fingerprint@2.2.so
+lib64/vendor.lge.hardware.biometrics.fingerprint@2.1.so
+lib64/vendor.lge.hardware.biometrics.fingerprint@2.2.so
+vendor/bin/hw/vendor.lge.hardware.biometrics.fingerprint@2.1-service
+vendor/etc/init/vendor.lge.hardware.biometrics.fingerprint@2.1-service.rc
 
 # NFC firmware
 vendor/firmware/libpn548ad_fw.so:vendor/lib/libpn548ad_fw.so
@@ -172,6 +183,17 @@ vendor/lib64/sensors.ssc.so
 # Sensors (LGE) - from Stock H870 V20I
 vendor/lib/libsensor_lge_cal.so
 vendor/lib64/libsensor_lge_cal.so
+
+# Sysnode
+framework/vendor.lge.hardware.sysnode-V1.0-java.jar:vendor/framework/vendor.lge.hardware.sysnode-V1.0-java.jar
+lib/vendor.lge.hardware.sysnode@1.0.so:vendor/lib/vendor.lge.hardware.sysnode@1.0.so
+lib64/vendor.lge.hardware.sysnode@1.0.so:vendor/lib64/vendor.lge.hardware.sysnode@1.0.so
+vendor/bin/hw/vendor.lge.hardware.sysnode@1.0-service
+vendor/etc/init/vendor.lge.hardware.sysnode@1.0-service.rc
+vendor/lib/hw/vendor.lge.hardware.sysnode@1.0-client.so
+vendor/lib/hw/vendor.lge.hardware.sysnode@1.0-impl.so
+vendor/lib64/hw/vendor.lge.hardware.sysnode@1.0-client.so
+vendor/lib64/hw/vendor.lge.hardware.sysnode@1.0-impl.so
 
 # Sprint
 -priv-app/SprintDM/SprintDM.apk

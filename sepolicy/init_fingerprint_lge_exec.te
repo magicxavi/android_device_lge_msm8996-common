@@ -1,0 +1,24 @@
+type fingerprint_lge, domain, binder_in_vendor_violators;
+type fingerprint_lge_exec_exec, exec_type, file_type, vendor_file_type;
+
+init_daemon_domain(fingerprint_lge_exec)
+vndbinder_use(fingerprint_lge_exec)
+
+allow init fingerprint_lge_exec:process transition;
+
+allow fingerprint_lge_exec self:capability { chown fowner fsetid };
+
+#allow fingerprint_lge_exec fingerprint_lge_exec_exec:file { rx_file_perms entrypoint };
+#allow fingerprint_lge_exec vendor_shell_exec:file { rx_file_perms entrypoint };
+#allow fingerprint_lge_exec vendor_toolbox_exec:file rx_file_perms;
+allow fingerprint_lge_exec hwservicemanager_prop:file { read open getattr };
+allow hwservicemanager fingerprint_lge_exec:binder { call transfer };
+allow fingerprint_lge_exec hwservicemanager:binder { call transfer };
+allow hwservicemanager fingerprint_lge_exec:dir { search };
+allow hwservicemanager fingerprint_lge_exec:file { read open getattr };
+allow hwservicemanager fingerprint_lge_exec:process { getattr };
+allow fingerprint_lge_exec fingerprint_lge_execa:hwservice_manager { find add };
+allow fingerprint_lge_exec hidl_base_hwservice:hwservice_manager { add };
+
+allow fingerprint_lge_execa fingerprint_lge_execa:service_manager find;
+allow fingerprint_lge_exec fingerprint_lge_execa:service_manager add;

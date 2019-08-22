@@ -1,0 +1,8 @@
+# Fingerprint
+vendor.lge.hardware.biometrics.fingerprint::ILgeBiometricsFingerprint u:object_r:fingerprint_lge_execa:s0
+
+# Property
+vendor.lge.hardware.property::IProperty                     u:object_r:hal_lge_property_hwservice:s0
+
+# Keymaster
+vendor.lge.hardware.lgkm::ILGKM                              u:object_r:hal_lge_lgkm_hwservice:s0

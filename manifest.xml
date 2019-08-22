@@ -728,6 +728,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
         <fqname>@2.1::ILgeBiometricsFingerprint/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.property</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IProperty</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.1::IProperty/default</fqname>
+    </hal>
     <!-- Data Link Latency -->
     <hal format="hidl">
         <name>vendor.qti.hardware.data.latency</name>
