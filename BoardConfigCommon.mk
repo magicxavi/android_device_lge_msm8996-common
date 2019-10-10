@@ -65,7 +65,7 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 # Audio
 BOARD_USES_ALSA_AUDIO := true
 # Temporary: Use AOSP audio HAL features as advanced features are currently broken
-TARGET_USES_AOSP_FOR_AUDIO := false
+TARGET_USES_AOSP_FOR_AUDIO := true
 ifneq ($(TARGET_USES_AOSP_FOR_AUDIO), true)
 USE_CUSTOM_AUDIO_POLICY := 1
 AUDIO_FEATURE_ENABLED_COMPRESS_CAPTURE := false
@@ -212,6 +212,7 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap2wake"
 TARGET_USES_INTERACTION_BOOST := true
 
 # RIL
+#TARGET_RIL_VARIANT := caf
 TARGET_USES_OLD_MNC_FORMAT := true
 
 # Qualcomm
