@@ -415,9 +415,8 @@ PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
 	
 # Telephony
-
-#PRODUCT_PACKAGES += \
-#    telephony-ext
+PRODUCT_PACKAGES += \
+    telephony-ext
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
