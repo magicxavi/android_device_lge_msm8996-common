@@ -1,4 +1,7 @@
 # Audio - from H870 V30B
+lib/libaudioroute.so
+lib64/libaudioroute.so
+vendor/lib/libcdsprpc.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -6,12 +9,13 @@ vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
 vendor/lib/libqtigef.so
+vendor/lib64/libcdsprpc.so
 
 # ADSP - from H870 V30B
 vendor/bin/adsprpcd
 vendor/lib64/libadsprpc.so
 vendor/lib64/libadsp_default_listener.so
-vendor/lib64/libcdsprpc.so|
+vendor/lib64/libcdsprpc.so
 vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libmdsprpc.so
@@ -23,7 +27,6 @@ vendor/lib/libcdsprpc.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
 vendor/lib/libmdsprpc.so
-vendor/lib/libmmcamera_imglib_faceproc_adspstub
 lib/libmdsprpc_system.so
 lib64/libmdsprpc_system.so
 
@@ -381,10 +384,10 @@ vendor/lib64/vendor.qti.gnss@1.1.so
 vendor/lib64/vendor.qti.gnss@1.2.so
 vendor/lib64/vendor.qti.gnss@2.0.so
 
-# Hotword Enrollment - from Stock H870 V20I
--priv-app/HotwordEnrollmentOKGoogleWCD9335/HotwordEnrollmentOKGoogleWCD9335.apk;PRESIGNED
--priv-app/HotwordEnrollmentTGoogleWCD9335/HotwordEnrollmentTGoogleWCD9335.apk;PRESIGNED
--priv-app/HotwordEnrollmentXGoogleWCD9335/HotwordEnrollmentXGoogleWCD9335.apk;PRESIGNED
+# Hotword Enrollment - from Stock H870 V30B
+-product/priv-app/HotwordEnrollmentOKGoogleWCD9335/HotwordEnrollmentOKGoogleWCD9335.apk;PRESIGNED
+-product/priv-app/HotwordEnrollmentTGoogleWCD9335/HotwordEnrollmentTGoogleWCD9335.apk;PRESIGNED
+-product/priv-app/HotwordEnrollmentXGoogleWCD9335/HotwordEnrollmentXGoogleWCD9335.apk;PRESIGNED
 
 # IMS - from oneplus 3
 vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so|d57f8d41f2912f44b2ccfffef60fa851370a0884
@@ -397,15 +400,10 @@ vendor/lib64/vendor.qti.ims.callinfo@1.0.so|523f6054e9d536d197defd66db9211a511a2
 vendor/lib/hw/keystore.msm8996.so
 vendor/lib64/hw/keystore.msm8996.so
 
-# LG Keymaster - from Stock H870 V20I
-lib/hw/lgkm.default.so
-lib/hw/lgkm.msm8996.so
-lib/liblgkm.so
-lib64/hw/lgkm.default.so
-lib64/hw/lgkm.msm8996.so
-lib64/liblgkm.so
-
-# Listen
+# Listen - from Stock H870 V30B
+framework/vendor.qti.voiceprint-V1.0-java.jar
+lib/vendor.qti.voiceprint@1.0.so
+lib64/vendor.qti.voiceprint@1.0.so
 vendor/lib/hw/sound_trigger.primary.msm8996.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
@@ -414,6 +412,10 @@ vendor/lib64/hw/sound_trigger.primary.msm8996.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Media - from Stock H870 V30B
+lib/vendor.qti.hardware.vpp@1.1.so
+lib/vendor.qti.hardware.vpp@1.2.so
+lib64/vendor.qti.hardware.vpp@1.1.so
+lib64/vendor.qti.hardware.vpp@1.2.so
 vendor/lib/libgpustats.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmm-color-convertor.so
@@ -479,12 +481,21 @@ vendor/firmware/leia_pm4_470.fw
 vendor/firmware/libpn548ad_fw.so:vendor/lib/libpn548ad_fw.so
 vendor/firmware/libpn548ad_fw.so:vendor/lib64/libpn548ad_fw_64.so
 
-# Perf - from Stock H870 V29A
+# Perf - from Stock V30B
+lib/libqti_performance.so
+lib/libqti-at.so
+lib/libqti-perfd-client_system.so
+lib/libqti-util_system.so
+lib/vendor.qti.hardware.perf@1.0.so
+lib64/libqti_performance.so
+lib64/libqti-at.so
+lib64/libqti-perfd-client_system.so
+lib64/libqti-util_system.so
+lib64/vendor.qti.hardware.perf@1.0.so
 vendor/bin/energy-awareness
 vendor/bin/msm_irqbalance
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
-vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/perf-profile0.conf
 vendor/etc/perf/perf-profile1.conf
 vendor/etc/perf/perf-profile2.conf
@@ -492,21 +503,25 @@ vendor/etc/perf/perf-profile3.conf
 vendor/etc/perf/perf-profile4.conf
 vendor/etc/perf/perf-profile5.conf
 vendor/etc/perf/perf-profile6.conf
-vendor/etc/perf/perfboostsconfig.xml
-vendor/etc/perf/targetconfig.xml
-vendor/etc/perf/targetresourceconfigs.xml
 vendor/lib/libperfgluelayer.so
+vendor/lib/libqtigef.so
 vendor/lib/libqti-perfd.so
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-util.so
-vendor/lib/vendor.qti.hardware.perf@1.0.so
+vendor/lib/libqti-wl.so
 vendor/lib64/libperfgluelayer.so
+vendor/lib64/libqtigef.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-util.so
-vendor/lib64/vendor.qti.hardware.perf@1.0.so
 
-# Peripheral manager - from Stock H870 V29A
+# Power - from Stock V30B
+vendor/bin/hw/android.hardware.power@1.2-service
+vendor/etc/init/android.hardware.power@1.2-service.rc
+vendor/lib/hw/power.default.so:vendor/lib/hw/power.msm8996.so
+vendor/lib64/hw/power.default.so:vendor/lib64/hw/power.msm8996.so
+
+# Peripheral manager - from Stock H870 V30B
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
@@ -683,19 +698,25 @@ vendor/lib64/lib-uceservice.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
-# Sensors
-vendor/bin/sensors.qcom:vendor/bin/sensors.qti
+# Sensors - from Stock H870 V30B
+framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
+lib/vendor.lge.hardware.sensors@1.0.so
+lib/vendor.qti.hardware.sensorscalibrate@1.0.so
+lib64/vendor.lge.hardware.sensors@1.0.so
+lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
+vendor/bin/sensors.qti
 vendor/lib/hw/activity_recognition.msm8996.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
-vendor/lib/libsensor_thresh.so
-vendor/lib/libsensor_user_cal.so
+vendor/lib/libsns_low_lat_stream_stub.so
+vendor/lib/sensor_calibrate.so
 vendor/lib/sensors.ssc.so
 vendor/lib64/hw/activity_recognition.msm8996.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
-vendor/lib64/libsensor_thresh.so
-vendor/lib64/libsensor_user_cal.so
+vendor/lib64/libsensorndkbridge.so
+vendor/lib64/libsns_low_lat_stream_stub.so
+vendor/lib64/sensor_calibrate.so
 vendor/lib64/sensors.ssc.so
 
 # Sensors (LGE) - from Stock H870 V30B
@@ -723,7 +744,7 @@ vendor/bin/thermal-engine
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Time services - from OnePlus/OnePlus3/OnePlus3:9/PKQ1.181203.001/1903190014:user/release-keys
+# Time services - from Stock H870 V30B
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/lib/libtime_genoff.so

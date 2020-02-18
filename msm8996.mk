@@ -89,6 +89,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.common@5.0-util \
     android.hardware.audio.effect@5.0 \
     android.hardware.audio.effect@5.0-impl \
+    android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
     audio.primary.msm8996 \
     audio.r_submix.default \
@@ -146,11 +147,23 @@ PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.animation.sh \
+    move_time_data.sh \
     init.qcom.usb.rc \
     init.target.rc \
     init.lucye.rc \
-    init.spectrum.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+	init.lge.power.rc \
+	init.lge.sensors.rc \
+	init.lge.usb.configfs.rc \
+	init.lge.usb.rc \
+	init.lge.audio.rc \
+	init.lge.bootproperty_trigger.rc \
+	init.lge.vendor.on_boot.rc \
+	init.lge.vendor.on_post_fs.rc \
+	init.lge.vendor.on_post_fs_data.rc \
+	init.lge.vendor.on_property.rc \
+	init.lge.vendor.services.rc \
+	vendor.lge.power.rc
 
 # Display
 PRODUCT_PACKAGES += \
@@ -238,9 +251,19 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0-java
 
-# HotwordEnrollement app permissions
+# Permission - Hotword
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
+    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-hotword.xml
+
+# Permission - Qualcomm
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
+
+# Permission - Lucye
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-lge-lucye-laop.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lge-lucye-laop.xml \
+    $(LOCAL_PATH)/configs/product/privapp-permissions-lge-lucye-laop.xml:$(TARGET_COPY_OUT_SYSTEM)/product/etc/permissions/privapp-permissions-lge-lucye-laop.xml \
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -338,11 +361,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
-# Qualcomm
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
-    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
-
 # RCS
 PRODUCT_PACKAGES += \
     rcs_service_aidl \
@@ -377,10 +395,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
-
-# Spectrum
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.spectrum.profile=0
 
 # Thermal
 PRODUCT_PACKAGES += \
