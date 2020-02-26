@@ -364,4 +364,7 @@
     <!--Default in Havoc is true -->
     <bool name="config_oldQtiTelephony">false</bool>
 
+    <!-- Whether to use in-built Screen Record service -->
+    <bool name="config_showScreenRecord">true</bool>
+
 </resources>
