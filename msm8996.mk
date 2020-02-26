@@ -190,7 +190,8 @@ PRODUCT_PACKAGES += \
 
 # Doze mode
 PRODUCT_PACKAGES += \
-    LGDoze
+    CustomDoze
+#    LGDoze
 
 # Pocket Mode
 PRODUCT_PACKAGES += \
